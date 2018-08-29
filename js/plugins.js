@@ -24,47 +24,57 @@
 // Place any jQuery/helper plugins in here.
 
 // jQuery scroll start stop
-(function() {
+// (function() {
   
-    var lastScrollAt = Date.now()
-      , timeout
+//     var lastScrollAt = Date.now()
+//       , timeout
   
-    function scrollStartStop() {
-        var $this = $(this)
+//     function scrollStartStop() {
+//         var $this = $(this)
       
-        if (Date.now() - lastScrollAt > 100)
-            $this.trigger('scrollstart')
+//         if (Date.now() - lastScrollAt > 100)
+//             $this.trigger('scrollstart')
           
-        lastScrollAt = Date.now()
+//         lastScrollAt = Date.now()
       
-        clearTimeout(timeout)
+//         clearTimeout(timeout)
       
-        timeout = setTimeout(function() {
-            if (Date.now() - lastScrollAt > 99)
-            $this.trigger('scrollend')
-        }, 100)
-    }
+//         timeout = setTimeout(function() {
+//             if (Date.now() - lastScrollAt > 99)
+//             $this.trigger('scrollend')
+//         }, 100)
+//     }
     
-    $(document).on('scroll', scrollStartStop)
+//     $(document).on('scroll', scrollStartStop)
     
-  })()
+// })()
 
 // anchor smooth scrolling
 $(document).ready(function() {
+    if(window.location.hash) {
+        var hash = window.location.hash;
+        
+        smoothScroll(hash);
+    }
+
     $('a[href*=#]').bind('click', function(e) {
         e.preventDefault(); // prevent hard jump, the default behavior
 
         var target = $(this).attr("href"); // Set the target as variable
 
+        smoothScroll(target);
+        
+        return false;
+    });
+
+    function smoothScroll(target) {
         // perform animated scrolling by getting top-position of target-element and set it as scroll target
         $('html, body').stop().animate({
             scrollTop: $(target).offset().top
-        }, 600, function() {
+        }, 300, function() {
             location.hash = target; //attach the hash (#jumptarget) to the pageurl
         });
-
-        return false;
-    });
+    }
 });
 
 $(window).scroll(function() {

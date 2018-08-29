@@ -256,6 +256,11 @@ nav ul.right-nav li {
     width: 110px;
     height: 200px;
     margin-left: 46px;
+    color: #B5B6BE;
+}
+
+nav ul.right-nav li.active {
+    color: #101010;
 }
 
 @-webkit-keyframes shine {
@@ -426,9 +431,9 @@ main h2 {
     margin-top: 80px;
     position: relative;
     background-color: white;
-    -webkit-box-shadow: 10px 12px 24px 0px rgba(237,237,237,1);
-    -moz-box-shadow: 10px 12px 24px 0px rgba(237,237,237,1);
-    box-shadow: 10px 12px 24px 0px rgba(237,237,237,1);
+    -webkit-box-shadow: 10px 12px 24px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 10px 12px 24px 0px rgba(0,0,0,0.1);
+    box-shadow: 10px 12px 24px 0px rgba(0,0,0,0.1);
 
 }
 
@@ -589,9 +594,9 @@ section h4 {
 }
 
 .page-section img {
-    -webkit-box-shadow: 10px 12px 24px 0px rgba(237,237,237,1);
-    -moz-box-shadow: 10px 12px 24px 0px rgba(237,237,237,1);
-    box-shadow: 10px 12px 24px 0px rgba(237,237,237,1);
+    -webkit-box-shadow: 10px 12px 24px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 10px 12px 24px 0px rgba(0,0,0,0.25);
+    box-shadow: 10px 12px 24px 0px rgba(0,0,0,0.25);
 }
 
 .contact-form {
