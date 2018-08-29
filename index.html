@@ -9,7 +9,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link href="https://fonts.googleapis.com/css?family=Finger+Paint|Poppins:400,600" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css?0126720969">
+        <link rel="stylesheet" href="css/main.css?0126720973">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -83,14 +83,23 @@
                     </g>
                </svg>
             </figure>
-            <figure class="aside-switch">
+            
+            <ul class="page-nav">
+                <li class="active"><a href="#hero"><span class="dot"></span></a></li>
+                <li><a href="#about-us"><span class="dot"></span></a></li>
+                <li><a href="#experience-points"><span class="dot"></span></a></li>
+                <li><a href="#been-reading"><span class="dot"></span></a></li>
+                <li><a href="#contact"><span class="dot"></span></a></li>
+            </ul>
+            
+            <!-- <figure class="aside-switch">
                 S
-            </figure>
+            </figure> -->
         </aside>
 
         <nav>
             <figure class="nav-icon">
-                <input id="toggle" type="checkbox"></input>
+                <input id="toggle" type="checkbox">
 
                 <label for="toggle" class="hamburger">
                     <div class="top-bun"></div>
@@ -99,13 +108,30 @@
                     <span>menu</span>
                 </label>
                 <div class="nav-takeover">
-                    <div class="nav-wrapper">
+                    <section class="likes-dislikes">
+                        <p class="likes">
+                            <mark>Things we like:</mark> fair weather for kickstarting meeting small talk, biking along the Schuykill River Trail, negative space in a particular place, beers, burgers, timely delivery, timely payments, lazy weekends, back-scratches, teamwork play.
+                        </p>
+                        <p class="dislikes">
+                            <mark>Things we don’t like:</mark> rainy days (but they’re not so bad), bud light lime, spotty Wi-fi, half pixels, flat tires – and that’s about it; not a very long list.
+                        </p>
+                    </section>
+                    <section class="nav-takeover-nav">
                         <ul>
-                            <li>About Us</li>
-                            <li>How we think</li>
-                            <li>Say Hello</li>
+                            <li>
+                                <h2 class="active">About us</h2>
+                                <p>When your homepage IS your about page</p>
+                            </li>
+                            <li>
+                                <h2>How we think</h2>
+                                <p>Big-agency thinking, simplified & refined. See how we do it</p>
+                            </li>
+                            <li>
+                                <h2>Say Hello</h2>
+                                <p>Got oppoable thumbs, don't ya? Use 'em!</p>
+                            </li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </figure>
             <ul class="right-nav">
@@ -117,7 +143,7 @@
 
         <main>
             <h2 class="tagline">USER EXPERIENCE BY DESIGN</h2>
-            <section class="hero">
+            <section class="page-section hero" id="hero">
                 <header>
                     <h1 class="hero-heading">We are problem solvers.</h1>
                     <h3 class="hero-subheading">We just happen to be pretty darn good at design & development too.</h3>
@@ -139,7 +165,7 @@
                     </article>
                 </div>
             </section>
-            <section class="content">
+            <section class="page-section" id="about-us">
                 <header>
                     <h2>A BIT<br>ABOUT US</h2>
                 </header>
@@ -153,14 +179,14 @@
                     know is there are two key gorilla-ish attributes that define our process, our work, & our 
                     outlook.
                     <br><br>
-                    "Spartan" & "Strong"</p>
+                    "Industrious" & "Mighty"</p>
                 </article>
             </section>
-            <section class="content">
+            <section class="page-section" id="experience-points">
                 <header>
                     <h2>EXPERIENCE<br>POINTS</h2>
                 </header>
-                <section class="handle-box centered">
+                <section class="handle-box centered from-right">
                     <div class="handle handle-n"></div>
                     <div class="handle handle-ne"></div>
                     <div class="handle handle-e"></div>
@@ -171,12 +197,23 @@
                     <div class="handle handle-nw"></div>  
                     <h2>Who we've worked with</h2>
                 </section>
-                <section class="two-column">
+                <section class="experience">
                     <figure class="experience-logos">
-                        logos here
+                        <img src="images/logos/logo-pmoa.svg" alt="Philadelphia Museum of Art Logo">
+                        <img src="images/logos/logo-la-colombe.svg" alt="La Colombe Logo">
+                        <img src="images/logos/logo-wisconsin.svg" alt="University of Wisonsin-Madison Logo">
+                        <img src="images/logos/logo-vertex.svg" alt="Vertex SMB Logo">
+                        <img src="images/logos/logo-fis.svg" alt="Fidelity Information Services Logo">
+                        <img src="images/logos/logo-comcast.svg" alt="Comcast Logo">
+                        <img src="images/logos/logo-astrazeneca.svg" alt="AstraZeneca Logo">
+                        <img src="images/logos/logo-power.svg" alt="Power Home Remodeling Logo">
+                        <img src="images/logos/logo-regions.svg" alt="Regions Bank Logo">
+                        <img src="images/logos/logo-kent-state.svg" alt="Kent State Logo">
+                        <img src="images/logos/logo-american-muscle.svg" alt="American Muscle Logo">
+                        <img src="images/logos/logo-texas-am.svg" alt="Texas A&M Logo">
                     </figure>
 
-                    <article>
+                    <article class="experience-copy">
                         <p><mark>Our collective experience working with world-class brands, at world-class companies, 
                         making world-class mobile & web experiences:</mark></p>
 
@@ -189,63 +226,68 @@
                     </article>
                 </section>
             </section>
-            <section class="content">
+            <section class="page-section" id="been-reading">
                 <header>
                     <h2>WHAT WE'VE<br>BEEN READING</h2>
                 </header>
                 <section class="two-column">
-                    <section>
-                        <figure></figure>
+                    <figure>
+                        <img src="https://www.fillmurray.com/542/372">
+                    </figure>
 
-                        <article>
-                            <h3>What is This Thing Called Design?</h3>
-    
-                            <a>source link goes here</a>
-    
-                            <p>Summary: Visual representations of UX stories capture attention, provide clarity, and 
-                            inspire us to take action. Storytelling plays a large role in crafting actionable user 
-                            experience strategies.</p>
-                        </article>
-                    </section>
+                    <article>
+                        <h4>What is This Thing Called Design?</h4>
 
-                    <section>
-                        <article>
-                            <h3>The Importance Of Design QA In Digital Product Design</h3>
-    
-                            <a>source link goes here</a>
-    
-                            <p>Summary: Great customer experiences don’t happen by accident. In digital product design, 
-                            the customer journey is the result of carefully nuanced planning and strategy and 
-                            implementation.</p>
-                        </article>
+                        <a>source link goes here</a>
 
-                        <figure></figure>
-                    </section>
+                        <p>Summary: Visual representations of UX stories capture attention, provide clarity, and 
+                        inspire us to take action. Storytelling plays a large role in crafting actionable user 
+                        experience strategies.</p>
+                    </article>
+                </section>
+
+                <section class="two-column">
+                    <article>
+                        <h4>The Importance Of Design QA In Digital Product Design</h4>
+
+                        <a>source link goes here</a>
+
+                        <p>Summary: Great customer experiences don’t happen by accident. In digital product design, 
+                        the customer journey is the result of carefully nuanced planning and strategy and 
+                        implementation.</p>
+                    </article>
+
+                    <figure>
+                        <img src="https://www.fillmurray.com/503/332">
+                    </figure>
                 </section>
             </section>
-            <section class="contact-form">
-                <form>
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
-                    <label for="email">Email</label>
-                    <input type="email"><br>
-                    <label for="message">Message</label>
-                    <textarea id="message"></textarea>
-                </form>
+            <section class="page-section contact-form" id="contact">
+                <section>
+                    <h3>Hello.</h3>
+                    <p>At this point, we've told you everything about us. Now it's your turn. We'd love to hear from you.</p>
+                    <form>
+                        <input type="text" id="name" placeholder="Name">
+                        <input type="email" placeholder="E-mail"><br>
+                        <textarea id="message" placeholder="Message"></textarea><br>
+                        <input type="submit" value="Send it">
+                    </form>
+                </section>
                 <figure></figure>
             </section>
 
             <footer>
                 <h2>BASED<br>IN PHILLY<br>XOXO</h2>
-                <h3>&copy; 2018 FIVE FOOT GORILLA, LLC</h3>
+                <h3 class="copyright">&copy; 2018 FIVE FOOT GORILLA</h3>
             </footer>
         </main>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js?0126720968"></script>
+        <script src="js/vendor/jquery.boxloader.min.js?0126720970"></script>
+        <script src="js/plugins.js?0126720970"></script>
+        <script src="js/main.js?0126720970"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

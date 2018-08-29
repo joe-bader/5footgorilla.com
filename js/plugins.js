@@ -48,3 +48,80 @@
     $(document).on('scroll', scrollStartStop)
     
   })()
+
+// anchor smooth scrolling
+$(document).ready(function() {
+    $('a[href*=#]').bind('click', function(e) {
+        e.preventDefault(); // prevent hard jump, the default behavior
+
+        var target = $(this).attr("href"); // Set the target as variable
+
+        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top
+        }, 600, function() {
+            location.hash = target; //attach the hash (#jumptarget) to the pageurl
+        });
+
+        return false;
+    });
+});
+
+$(window).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+    
+        // Assign active class to nav links while scolling
+        $('.page-section').each(function(i) {
+                if ($(this).position().top <= (scrollDistance + 50)) {
+                        $('.page-nav li.active').removeClass('active');
+                        $('.page-nav li').eq(i).addClass('active');
+                }
+        });
+}).scroll();
+
+// boxLoader
+$(document).ready(function() {
+    $(window).scrollTop(1);
+    $(".handle-box").boxLoader({
+        direction:"x",
+        position: "100%",
+        effect: "fadeIn",
+        duration: ".5s",
+        windowarea: "100%"
+    });
+    $(".hero header").boxLoader({
+        direction:"x",
+        position: "-100%",
+        effect: "fadeIn",
+        duration: ".5s",
+        windowarea: "100%"
+    });
+    $("header h2").boxLoader({
+        direction:"none",
+        position: "none",
+        effect: "fadeIn",
+        duration: "2s",
+        windowarea: "100%"
+    });
+    $(".page-section figure img").boxLoader({
+        direction:"y",
+        position: "100%",
+        effect: "fadeIn",
+        duration: "1s",
+        windowarea: "100%"
+    });
+    $(".contact-form h3").boxLoader({
+        direction:"none",
+        position: "none",
+        effect: "fadeIn",
+        duration: "2s",
+        windowarea: "100%"
+    });
+    $(".contact-form figure").boxLoader({
+        direction:"none",
+        position: "none",
+        effect: "fadeIn",
+        duration: "2s",
+        windowarea: "100%"
+    });
+});
