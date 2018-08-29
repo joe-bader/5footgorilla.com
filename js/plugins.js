@@ -86,14 +86,14 @@ $(document).ready(function() {
         direction:"x",
         position: "100%",
         effect: "fadeIn",
-        duration: ".5s",
+        duration: "1s",
         windowarea: "100%"
     });
     $(".hero header").boxLoader({
         direction:"x",
         position: "-100%",
         effect: "fadeIn",
-        duration: ".5s",
+        duration: "1s",
         windowarea: "100%"
     });
     $("header h2").boxLoader({
